@@ -1,0 +1,8 @@
+- API Mapa
+- Seccion de Favoritos
+- Brra de busqueda.
+- Modo claro y oscuro.
+- Cambio de las paletas.
+- Cambios de viewport.
+- Seccion de Help y About Us con comentarios del Feedback y QAS.
+- Cambiar a banner contemporizador en el main.
