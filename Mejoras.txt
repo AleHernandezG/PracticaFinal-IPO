@@ -1,8 +1,6 @@
 - API Mapa
-- Seccion de Favoritos
-- Brra de busqueda.
-- Modo claro y oscuro.
-- Cambio de las paletas.
-- Cambios de viewport.
+- Seccion de Favoritos (Busquedas recientes)
+- Cambios de viewport. 50/50
 - Seccion de Help y About Us con comentarios del Feedback y QAS.
 - Cambiar a banner contemporizador en el main.
+- Que funcionen las flechas del propio navegador
