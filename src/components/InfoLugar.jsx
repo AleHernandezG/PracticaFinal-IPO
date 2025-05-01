@@ -3,22 +3,20 @@ import React from "react";
 const InfoLugar = ({ lugar }) => {
   if (!lugar)
     return (
-      <div className="rounded-md md:bg-[url(/logo.jpeg)] shadow-light-shadow dark:shadow-dark-shadow mx-4 my-4 shadow-2xl hover:skew-y-1 hover:scale-105 hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover hover:border-light-border dark:hover:border-dark-border transition-all duration-200 ease-in md:col-start-1 md:col-span-4 md:row-start-3 md:row-end-7"></div>
+      <div className="rounded-md md:bg-[url(/logo.jpeg)] shadow-light-shadow dark:shadow-dark-shadow mx-2 my-2 shadow-2xl hover:skew-y-1 hover:scale-[1.02] hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover hover:border-light-border dark:hover:border-dark-border transition-all duration-200 ease-in md:col-start-1 md:col-span-4 md:row-start-3 md:row-end-7 max-w-[98%]"></div>
     );
 
   return (
-    <div className="bg-light-card dark:bg-dark-card text-light-text dark:text-dark-text p-6 rounded-xl shadow-2xl md:col-start-1 md:col-span-4 md:row-start-3 md:row-end-7 space-y-4">
-      {/* Imagen del lugar si existe */}
+    <div className="bg-light-card dark:bg-dark-card text-light-text dark:text-dark-text p-4 rounded-xl shadow-2xl md:col-start-1 md:col-span-4 md:row-start-3 md:row-end-7 space-y-3 mx-2 my-2 max-w-[98%]">
       {lugar.rutaImagen && (
         <img
           src={lugar.rutaImagen}
           alt={`Imagen de ${lugar.nombre}`}
-          className="w-full h-64 object-cover rounded-lg shadow-md"
+          className="w-full h-48 object-cover rounded-lg shadow-md"
         />
       )}
 
-      {/* Título destacado */}
-      <h2 className="text-3xl font-extrabold text-light-accent dark:text-dark-accent border-b-2 border-light-border dark:border-dark-border pb-2">
+      <h2 className="text-2xl font-extrabold text-light-accent dark:text-dark-accent border-b-2 border-light-border dark:border-dark-border pb-1">
         {lugar.nombre}
       </h2>
 

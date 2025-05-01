@@ -1,6 +1,8 @@
 - API Mapa
-- Seccion de Favoritos (Busquedas recientes)
+- Poner las farmacias de guardia.
+- Seccion de Mapa (Busquedas recientes plantearlo si no es muy jodido en ese apartado). Básicamente importar un google maps
 - Cambios de viewport. 50/50
-- Seccion de Help y About Us con comentarios del Feedback y QAS.
+- Seccion de Help y About Us con comentarios del Feedback y QAS. (modo oscuro y claro y meter mas preguntas y que la gente pueda hacer las suyas)
 - Cambiar a banner contemporizador en el main.
 - Que funcionen las flechas del propio navegador
+- Sección con una API de chat gpt para consultar acerca de consultas médicas o tal vainas, vamos lo que tienen todos.
