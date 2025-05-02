@@ -14,13 +14,13 @@ const Dashboard = () => {
   };
 
   return (
-    <section className="bg-white text-gray-800 py-20 px-6 md:px-16 max-w-6xl mx-auto">
+    <section className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text py-20 px-6 md:px-16 max-w-6xl mx-auto">
       {!showFAQ ? (
         <>
           {/* Sección Nuestra Misión */}
           <div className="grid md:grid-cols-2 gap-10 items-center mb-24">
             <div>
-              <h2 className="text-4xl font-bold text-indigo-600 mb-4">
+              <h2 className="text-4xl font-bold text-light-accent dark:text-dark-accent mb-4">
                 NUESTRA MISIÓN
               </h2>
               <p className="text-lg leading-relaxed">
@@ -33,7 +33,7 @@ const Dashboard = () => {
               </p>
               <ul className="mt-6 space-y-2">
                 <li className="flex items-center">
-                  <span className="bg-indigo-100 text-indigo-800 p-1 rounded-full mr-2">
+                  <span className="bg-light-accent/20 text-light-accent dark:bg-dark-accent/20 dark:text-dark-accent p-1 rounded-full mr-2">
                     <svg
                       className="w-4 h-4"
                       fill="currentColor"
@@ -49,7 +49,7 @@ const Dashboard = () => {
                   Historia del equipo
                 </li>
                 <li className="flex items-center">
-                  <span className="bg-indigo-100 text-indigo-800 p-1 rounded-full mr-2">
+                  <span className="bg-light-accent/20 text-light-accent dark:bg-dark-accent/20 dark:text-dark-accent p-1 rounded-full mr-2">
                     <svg
                       className="w-4 h-4"
                       fill="currentColor"
@@ -85,7 +85,7 @@ const Dashboard = () => {
               />
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-4xl font-bold text-indigo-600 mb-4">
+              <h2 className="text-4xl font-bold text-light-accent dark:text-dark-accent mb-4">
                 NUESTRA HISTORIA
               </h2>
               <p className="text-lg leading-relaxed">
@@ -103,7 +103,7 @@ const Dashboard = () => {
           <div className="text-center">
             <button
               onClick={handleHelpClick}
-              className="bg-indigo-600 text-white px-8 py-4 rounded-lg shadow-lg text-lg font-semibold hover:bg-indigo-700 transition duration-300"
+              className="bg-light-button dark:bg-dark-button text-white px-8 py-4 rounded-lg shadow-lg text-lg font-semibold hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover transition duration-300"
             >
               Ayuda y Preguntas Frecuentes
             </button>
@@ -113,7 +113,7 @@ const Dashboard = () => {
         <>
           <button
             onClick={handleBackClick}
-            className="mb-8 flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-300 text-lg"
+            className="mb-8 flex items-center text-light-accent dark:text-dark-accent hover:text-light-accentText dark:hover:text-dark-accentText transition-colors duration-300 text-lg"
           >
             <svg
               className="w-6 h-6 mr-2"

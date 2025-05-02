@@ -16,9 +16,25 @@ const InfoLugar = ({ lugar }) => {
         />
       )}
 
-      <h2 className="text-2xl font-extrabold text-light-accent dark:text-dark-accent border-b-2 border-light-border dark:border-dark-border pb-1">
+      <h2 className="text-2xl font-extrabold text-light-accent dark:text-dark-accent border-b-2 border-light-border dark:border-dark-border pb-1 text-center">
         {lugar.nombre}
       </h2>
+
+      {/* Mostrar si es farmacia y tiene guardia */}
+      {lugar.tipo === "farmacia" && (
+        <p className="bg-light-accent/10 dark:bg-dark-accent/10 p-2 rounded-md">
+          <strong className="text-light-accent dark:text-dark-accent">
+            🚨 Farmacia de guardia actual:
+          </strong>{" "}
+          {lugar.guardia === "si" ? (
+            <span className="text-green-600 dark:text-green-400 font-bold">
+              Sí
+            </span>
+          ) : (
+            <span className="text-red-600 dark:text-red-400 font-bold">No</span>
+          )}
+        </p>
+      )}
 
       <p>
         <strong className="text-light-accent dark:text-dark-accent">
@@ -31,12 +47,6 @@ const InfoLugar = ({ lugar }) => {
           📍 Dirección:
         </strong>{" "}
         {lugar.direccion}
-      </p>
-      <p>
-        <strong className="text-light-accent dark:text-dark-accent">
-          🏥 Tipo:
-        </strong>{" "}
-        {lugar.tipo}
       </p>
       <p>
         <strong className="text-light-accent dark:text-dark-accent">

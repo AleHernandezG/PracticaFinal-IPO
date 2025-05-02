@@ -3,23 +3,72 @@ import ThemeToggleButton from "./ThemeToggleButton";
 
 const Header = ({ onNavigate }) => {
   const [activeTab, setActiveTab] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleClick = (tab) => {
     setActiveTab(tab);
     onNavigate(tab);
+    setIsMenuOpen(false); // Cerrar el menú después de seleccionar una opción
   };
 
   return (
-    <header className="sticky top-0 flex bg-light-background dark:bg-dark-background shadow-lg rounded-b-lg w-full h-14 items-center justify-center md:justify-between px-4 z-10 border-b-2 border-b-light-border dark:border-b-dark-border/60">
-      <div className="container flex justify-center cursor-pointer md:justify-start">
+    <header className="sticky top-0 flex bg-light-background dark:bg-dark-background shadow-lg rounded-b-lg w-full h-14 items-center justify-between px-4 z-10 border-b-2 border-b-light-border dark:border-b-dark-border/60">
+      {/* Botón de menú para móviles */}
+      <div className="md:hidden flex items-center">
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="text-light-text dark:text-dark-text p-2 rounded-md hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      {/* Menú desplegable para móviles */}
+      {isMenuOpen && (
+        <div className="absolute top-14 left-0 w-full bg-light-background dark:bg-dark-background shadow-md md:hidden z-20">
+          <ul className="flex flex-col gap-2 p-2">
+            {["home", "map", "dashboard"].map((tab) => (
+              <li key={tab}>
+                <button
+                  onClick={() => handleClick(tab)}
+                  className={`w-full px-4 py-2 font-sans rounded-md font-semibold text-nowrap transition-all duration-200 ease-in ${
+                    activeTab === tab
+                      ? "bg-light-button dark:bg-dark-button text-light-text dark:text-dark-text border-b-2 border-b-light-border dark:border-b-dark-border shadow-md"
+                      : "text-light-text dark:text-dark-text hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover hover:text-light-textHover dark:hover:text-dark-textHover hover:border-b-2 hover:border-b-light-border dark:hover:border-b-dark-border"
+                  }`}
+                >
+                  {tab === "home" ? "Home" : tab === "map" ? "Map" : "About Us"}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Logo - centrado en móviles, a la izquierda en desktop */}
+      <div className="flex-1 flex justify-center md:justify-start">
         <h1
-          className="text-light-text dark:text-dark-text text-2xl px-4 py-2 font-bold text-center hover:scale-110 hover:opacity-110 transition-all duration-200 ease-in md:text-left"
+          className="text-light-text dark:text-dark-text text-2xl px-4 py-2 font-bold text-center hover:scale-110 hover:opacity-110 transition-all duration-200 ease-in md:text-left cursor-pointer"
           onClick={() => handleClick("home")}
         >
           CliniGo
         </h1>
       </div>
 
+      {/* Navegación para desktop */}
       <nav className="hidden md:flex">
         <ul className="flex gap-8 mr-5 justify-around items-center">
           {["home", "map", "dashboard"].map((tab) => (
@@ -39,6 +88,7 @@ const Header = ({ onNavigate }) => {
         </ul>
       </nav>
 
+      {/* Botón de tema */}
       <div className="flex items-center">
         <ThemeToggleButton />
       </div>

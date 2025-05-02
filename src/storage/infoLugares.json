@@ -25,7 +25,8 @@
       "discapacitados": true,
       "mascotas": true,
       "servicios": ["Venta de medicamentos", "Asesoramiento farmacéutico"]
-    }
+    },
+    "guardia": "no"
   },
   {
     "id": 3,
@@ -67,7 +68,8 @@
       "discapacitados": true,
       "mascotas": true,
       "servicios": ["Venta de medicamentos", "Servicio a domicilio"]
-    }
+    },
+    "guardia": "si"
   },
   {
     "id": 6,
@@ -95,7 +97,8 @@
       "discapacitados": true,
       "mascotas": true,
       "servicios": ["Venta de medicamentos", "Asesoramiento nutricional"]
-    }
+    },
+    "guardia": "no"
   },
   {
     "id": 8,
@@ -123,7 +126,8 @@
       "discapacitados": true,
       "mascotas": true,
       "servicios": ["Venta de medicamentos", "Servicio a domicilio"]
-    }
+    },
+    "guardia": "si"
   },
   {
     "id": 10,
