@@ -24,7 +24,7 @@ const Ventana = ({ onClose }) => {
   // Alternar entre Login y Registro
   const cambiarVentana = () => {
     setIsLogin(!isLogin);
-    setShowForgotPassword(false); // Asegurarse de que no se muestre la pantalla de recuperar contraseña al cambiar
+    setShowForgotPassword(false);
   };
 
   // Mostrar / Ocultar la ventana de recuperar contraseña
@@ -45,16 +45,13 @@ const Ventana = ({ onClose }) => {
     );
     if (persona) {
       alert(`Bienvenido, ${persona.nombre}`);
-      // Establecer el usuario activo
-      quitarActivos(); // Quitar todos los usuarios como activos
+      quitarActivos();
       persona.activo = true;
       localStorage.setItem("user", JSON.stringify(persona));
 
-      // Cerrar la ventana de login usando el callback proporcionado
       if (onClose) {
         onClose();
       } else {
-        // Para GitHub Pages, no usamos rutas absolutas
         window.location.href = "./index.html";
       }
     } else {
@@ -74,22 +71,20 @@ const Ventana = ({ onClose }) => {
       return;
     }
 
-    // Verificar si el email ya está registrado
     const emailExistente = personas.find((p) => p.email === email);
     if (emailExistente) {
       alert("El email ya está registrado");
       return;
     }
 
-    quitarActivos(); // Quitar todos los usuarios como activos
+    quitarActivos();
 
-    // Crear una nueva instancia de Persona y agregarla a la lista
     const nuevaPersona = new Persona();
     nuevaPersona.establecerDatos(
       nombre,
       email,
       password,
-      "public/av1.jpg", // Usar ruta relativa para GitHub Pages
+      "public/av1.jpg",
       true
     );
 
@@ -100,11 +95,9 @@ const Ventana = ({ onClose }) => {
 
     alert("Cuenta creada exitosamente");
 
-    // Cerrar la ventana de registro usando el callback proporcionado
     if (onClose) {
       onClose();
     } else {
-      // Para GitHub Pages, no usamos rutas absolutas
       window.location.href = "./index.html";
     }
   };
@@ -124,20 +117,19 @@ const Ventana = ({ onClose }) => {
   const quitarActivos = () => {
     personas.forEach((p) => (p.activo = false));
     localStorage.setItem("personas", JSON.stringify(personas));
-
-    // También tenemos que borrar el local storage del usuario activo
     localStorage.removeItem("user");
   };
 
-  // Añadir botón para cerrar o volver
-  const renderBackButton = () => (
+  // Botón de cierre mejorado
+  const renderCloseButton = () => (
     <button
       onClick={onClose}
-      className="absolute top-4 right-4 text-gray-400 hover:text-white"
+      className="absolute top-4 right-4 p-2 rounded-full hover:bg-light-buttonHover/20 dark:hover:bg-dark-buttonHover/20 transition-colors"
       aria-label="Cerrar"
+      title="Volver al inicio"
     >
       <svg
-        className="w-6 h-6"
+        className="w-6 h-6 text-light-text dark:text-dark-text"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -148,16 +140,16 @@ const Ventana = ({ onClose }) => {
           strokeLinejoin="round"
           strokeWidth="2"
           d="M6 18L18 6M6 6l12 12"
-        ></path>
+        />
       </svg>
     </button>
   );
 
   return (
-    <div className="flex items-center justify-center fixed inset-0 h-screen w-full bg-light-background dark:bg-dark-background z-50">
+    <div className="flex items-center justify-center fixed inset-0 h-screen w-full bg-light-background/80 dark:bg-dark-background/80 z-50 backdrop-blur-sm">
       {showForgotPassword ? (
         <div className="bg-light-card dark:bg-dark-card p-8 rounded-lg shadow-2xl w-96 flex flex-col relative">
-          {onClose && renderBackButton()}
+          {renderCloseButton()}
           <h1 className="text-3xl text-light-text dark:text-dark-text font-poppins font-semibold text-center mb-8">
             Recuperar Contraseña
           </h1>
@@ -167,7 +159,7 @@ const Ventana = ({ onClose }) => {
           <input
             type="email"
             ref={emailRecuperarRef}
-            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text"
+            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text mb-4"
           />
           <button
             onClick={recuperarContrasena}
@@ -187,7 +179,7 @@ const Ventana = ({ onClose }) => {
         </div>
       ) : isLogin ? (
         <div className="bg-light-card dark:bg-dark-card p-8 rounded-lg shadow-2xl w-96 flex flex-col relative">
-          {onClose && renderBackButton()}
+          {renderCloseButton()}
           <h1 className="text-3xl text-light-text dark:text-dark-text font-poppins font-semibold text-center mb-8">
             Iniciar Sesión
           </h1>
@@ -197,7 +189,7 @@ const Ventana = ({ onClose }) => {
           <input
             type="email"
             ref={emailRef}
-            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text"
+            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text mb-4"
           />
           <label className="block text-light-text dark:text-dark-text font-poppins mt-4 mb-2">
             Contraseña
@@ -205,7 +197,7 @@ const Ventana = ({ onClose }) => {
           <input
             type="password"
             ref={passwordRef}
-            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text"
+            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text mb-4"
           />
           <div className="flex justify-between items-center mt-4">
             <a
@@ -235,7 +227,7 @@ const Ventana = ({ onClose }) => {
         </div>
       ) : (
         <div className="bg-light-card dark:bg-dark-card p-8 rounded-lg shadow-2xl w-96 flex flex-col relative">
-          {onClose && renderBackButton()}
+          {renderCloseButton()}
           <h1 className="text-2xl text-light-text dark:text-dark-text font-poppins font-semibold text-center mb-8">
             Crear Cuenta
           </h1>
@@ -245,7 +237,7 @@ const Ventana = ({ onClose }) => {
           <input
             type="text"
             ref={nameRef}
-            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text"
+            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text mb-4"
           />
           <label className="block text-light-text dark:text-dark-text font-poppins mt-4 mb-2">
             Email
@@ -253,7 +245,7 @@ const Ventana = ({ onClose }) => {
           <input
             type="email"
             ref={emailRef}
-            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text"
+            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text mb-4"
           />
           <label className="block text-light-text dark:text-dark-text font-poppins mt-4 mb-2">
             Contraseña
@@ -261,7 +253,7 @@ const Ventana = ({ onClose }) => {
           <input
             type="password"
             ref={passwordRef}
-            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text"
+            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text mb-4"
           />
           <label className="block text-light-text dark:text-dark-text font-poppins mt-4 mb-2">
             Confirmar Contraseña
@@ -269,7 +261,7 @@ const Ventana = ({ onClose }) => {
           <input
             type="password"
             ref={confirmPasswordRef}
-            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text"
+            className="w-full p-2 rounded bg-light-border dark:bg-dark-border text-light-text dark:text-dark-text mb-4"
           />
           <button
             className="mt-6 bg-light-button dark:bg-dark-button text-white px-4 py-2 rounded hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover"

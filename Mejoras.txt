@@ -1,6 +1,5 @@
-- API Mapa
+- Mpa ver las busquedas recientes y fav.
 - Seccion de Mapa (Busquedas recientes plantearlo si no es muy jodido en ese apartado). Básicamente importar un google maps
-- Cambios de viewport. 50/50
 - Seccion de Help y About Us con comentarios del Feedback y QAS. (modo oscuro y claro y meter mas preguntas y que la gente pueda hacer las suyas)
 - Cambiar a banner contemporizador en el main.
 - Que funcionen las flechas del propio navegador

@@ -1,0 +1,186 @@
+[
+  {
+    "id": 1,
+    "nombre": "Hospital Universitario de Salamanca",
+    "tipo": "hospital",
+    "coordenadas": {
+      "lat": 40.9634,
+      "lng": -5.6634
+    },
+    "direccion": "Paseo de San Vicente, 58, 37007 Salamanca",
+    "telefono": "923 29 11 00",
+    "horario": "Lunes a Viernes: 8:00 - 20:00, Sábados: 9:00 - 14:00",
+    "descripcion": "Hospital público con servicios de urgencias, consultas externas y especialidades médicas.",
+    "accesibilidad": {
+      "discapacitados": true,
+      "mascotas": false,
+      "servicios": ["Urgencias", "Consultas", "Radiología", "Cirugía"]
+    }
+  },
+  {
+    "id": 2,
+    "nombre": "Farmacia Calle Zamora",
+    "tipo": "farmacia",
+    "coordenadas": {
+      "lat": 40.9652,
+      "lng": -5.6643
+    },
+    "direccion": "Calle Zamora, 12, 37002 Salamanca",
+    "telefono": "923 12 34 56",
+    "horario": "Lunes a Domingo: 9:00 - 21:00",
+    "descripcion": "Farmacia con amplio surtido de medicamentos y productos de parafarmacia.",
+    "accesibilidad": {
+      "discapacitados": true,
+      "mascotas": true,
+      "servicios": ["Venta de medicamentos", "Asesoramiento farmacéutico"]
+    },
+    "guardia": "no"
+  },
+  {
+    "id": 3,
+    "nombre": "Urgencias Salamanca",
+    "tipo": "urgencias",
+    "coordenadas": {
+      "lat": 40.9618,
+      "lng": -5.6672
+    },
+    "direccion": "Av. de la Aldehuela, s/n, 37007 Salamanca",
+    "telefono": "923 23 45 67",
+    "horario": "Abierto 24 horas",
+    "descripcion": "Servicio de urgencias médicas disponible las 24 horas.",
+    "accesibilidad": {
+      "discapacitados": true,
+      "mascotas": false,
+      "servicios": ["Atención médica urgente", "Traumatología", "Pediatría"]
+    }
+  },
+  {
+    "id": 4,
+    "nombre": "Clínica Salamanca",
+    "tipo": "clinica",
+    "coordenadas": {
+      "lat": 40.9647,
+      "lng": -5.6589
+    },
+    "direccion": "Calle Gran Vía, 45, 37003 Salamanca",
+    "telefono": "923 98 76 54",
+    "horario": "Lunes a Viernes: 9:00 - 19:00",
+    "descripcion": "Clínica privada con servicios de medicina general y especialidades.",
+    "accesibilidad": {
+      "discapacitados": true,
+      "mascotas": false,
+      "servicios": ["Medicina general", "Dermatología", "Ginecología"]
+    }
+  },
+  {
+    "id": 5,
+    "nombre": "Farmacia Plaza Mayor",
+    "tipo": "farmacia",
+    "coordenadas": {
+      "lat": 40.9649,
+      "lng": -5.6632
+    },
+    "direccion": "Plaza Mayor, 10, 37002 Salamanca",
+    "telefono": "923 21 43 65",
+    "horario": "Lunes a Domingo: 9:00 - 22:00",
+    "descripcion": "Farmacia ubicada en el corazón de Salamanca, con servicio de entrega a domicilio.",
+    "accesibilidad": {
+      "discapacitados": true,
+      "mascotas": true,
+      "servicios": ["Venta de medicamentos", "Servicio a domicilio"]
+    },
+    "guardia": "si"
+  },
+  {
+    "id": 6,
+    "nombre": "Centro de Salud Salamanca Centro",
+    "tipo": "centro_salud",
+    "coordenadas": {
+      "lat": 40.9658,
+      "lng": -5.6615
+    },
+    "direccion": "Calle Toro, 33, 37002 Salamanca",
+    "telefono": "923 26 78 90",
+    "horario": "Lunes a Viernes: 8:00 - 15:00",
+    "descripcion": "Centro de salud público con servicios de atención primaria.",
+    "accesibilidad": {
+      "discapacitados": true,
+      "mascotas": false,
+      "servicios": ["Atención primaria", "Vacunación", "Enfermería"]
+    }
+  },
+  {
+    "id": 7,
+    "nombre": "Farmacia San Juan",
+    "tipo": "farmacia",
+    "coordenadas": {
+      "lat": 40.9662,
+      "lng": -5.6598
+    },
+    "direccion": "Calle San Juan, 8, 37001 Salamanca",
+    "telefono": "923 25 67 89",
+    "horario": "Lunes a Sábado: 9:00 - 21:00",
+    "descripcion": "Farmacia con amplia experiencia en el cuidado de la salud.",
+    "accesibilidad": {
+      "discapacitados": true,
+      "mascotas": true,
+      "servicios": ["Venta de medicamentos", "Asesoramiento nutricional"]
+    },
+    "guardia": "no"
+  },
+  {
+    "id": 8,
+    "nombre": "Clínica Dental Salamanca",
+    "tipo": "clinica_dental",
+    "coordenadas": {
+      "lat": 40.9631,
+      "lng": -5.6603
+    },
+    "direccion": "Calle Ruiz Aguilera, 15, 37002 Salamanca",
+    "telefono": "923 22 33 44",
+    "horario": "Lunes a Viernes: 10:00 - 18:00",
+    "descripcion": "Clínica dental especializada en ortodoncia y estética dental.",
+    "accesibilidad": {
+      "discapacitados": true,
+      "mascotas": false,
+      "servicios": ["Ortodoncia", "Blanqueamiento dental", "Implantes"]
+    }
+  },
+  {
+    "id": 9,
+    "nombre": "Farmacia La Alamedilla",
+    "tipo": "farmacia",
+    "coordenadas": {
+      "lat": 40.9605,
+      "lng": -5.6627
+    },
+    "direccion": "Calle La Alamedilla, 5, 37005 Salamanca",
+    "telefono": "923 24 56 78",
+    "horario": "Lunes a Domingo: 9:00 - 21:00",
+    "descripcion": "Farmacia con servicio de atención personalizada y entrega a domicilio.",
+    "accesibilidad": {
+      "discapacitados": true,
+      "mascotas": true,
+      "servicios": ["Venta de medicamentos", "Servicio a domicilio"]
+    },
+    "guardia": "si"
+  },
+  {
+    "id": 10,
+    "nombre": "Hospital Clínico de Salamanca",
+    "tipo": "hospital",
+    "coordenadas": {
+      "lat": 40.9623,
+      "lng": -5.6658
+    },
+    "direccion": "Paseo de San Vicente, 108, 37007 Salamanca",
+    "telefono": "923 29 11 11",
+    "horario": "Lunes a Viernes: 8:00 - 20:00, Sábados: 9:00 - 14:00",
+    "descripcion": "Hospital clínico con servicios de alta especialización y tecnología avanzada.",
+    "accesibilidad": {
+      "discapacitados": true,
+      "mascotas": false,
+      "servicios": ["Cirugía", "Oncología", "Cardiología"]
+    }
+  }
+]
