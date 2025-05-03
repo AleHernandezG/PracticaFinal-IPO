@@ -7,6 +7,7 @@ import Header from "./Header";
 import Ventana from "./Ventana";
 import Map from "./Map";
 import Dashboard from "./Dashboard";
+import Help from "./Help"; // Asegúrate de crear este componente
 import lugaresData from "/src/storage/infoLugares.json";
 
 const MainContent = () => {
@@ -63,6 +64,8 @@ const MainContent = () => {
         return <Map />;
       case "dashboard":
         return <Dashboard usuario={usuarioActivo} />;
+      case "help":
+        return <Help />;
       case "home":
       default:
         return (

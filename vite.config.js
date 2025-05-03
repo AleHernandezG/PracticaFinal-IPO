@@ -26,7 +26,8 @@ export default defineConfig({
       "react",
       "react-dom",
       "leaflet",
-      "leaflet-routing-machine", // Incluido para mejor precarga
+      "leaflet-routing-machine",
+      "react-spinners", // Incluido para mejor precarga
     ],
     exclude: [], // Ya no necesitamos excluir
   },

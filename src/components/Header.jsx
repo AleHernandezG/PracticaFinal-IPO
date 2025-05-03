@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import ThemeToggleButton from "./ThemeToggleButton";
 
-const Header = ({ onNavigate }) => {
-  const [activeTab, setActiveTab] = useState("home");
+const Header = ({ onNavigate, activeScreen }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Mapeo de tabs a nombres mostrados
+  const tabLabels = {
+    home: "Home",
+    map: "Map",
+    dashboard: "About Us",
+    help: "Help",
+  };
+
+  const tabs = ["home", "map", "dashboard", "help"];
+
   const handleClick = (tab) => {
-    setActiveTab(tab);
     onNavigate(tab);
     setIsMenuOpen(false); // Cerrar el menú después de seleccionar una opción
   };
@@ -40,17 +48,17 @@ const Header = ({ onNavigate }) => {
       {isMenuOpen && (
         <div className="absolute top-14 left-0 w-full bg-light-background dark:bg-dark-background shadow-md md:hidden z-20">
           <ul className="flex flex-col gap-2 p-2">
-            {["home", "map", "dashboard"].map((tab) => (
+            {tabs.map((tab) => (
               <li key={tab}>
                 <button
                   onClick={() => handleClick(tab)}
                   className={`w-full px-4 py-2 font-sans rounded-md font-semibold text-nowrap transition-all duration-200 ease-in ${
-                    activeTab === tab
+                    activeScreen === tab
                       ? "bg-light-button dark:bg-dark-button text-light-text dark:text-dark-text border-b-2 border-b-light-border dark:border-b-dark-border shadow-md"
                       : "text-light-text dark:text-dark-text hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover hover:text-light-textHover dark:hover:text-dark-textHover hover:border-b-2 hover:border-b-light-border dark:hover:border-b-dark-border"
                   }`}
                 >
-                  {tab === "home" ? "Home" : tab === "map" ? "Map" : "About Us"}
+                  {tabLabels[tab]}
                 </button>
               </li>
             ))}
@@ -70,18 +78,18 @@ const Header = ({ onNavigate }) => {
 
       {/* Navegación para desktop */}
       <nav className="hidden md:flex">
-        <ul className="flex gap-8 mr-5 justify-around items-center">
-          {["home", "map", "dashboard"].map((tab) => (
+        <ul className="flex gap-4 mr-5 justify-around items-center">
+          {tabs.map((tab) => (
             <li key={tab}>
               <button
                 onClick={() => handleClick(tab)}
                 className={`px-4 py-2 font-sans rounded-md font-semibold text-nowrap transition-all duration-200 ease-in ${
-                  activeTab === tab
+                  activeScreen === tab
                     ? "bg-light-button dark:bg-dark-button text-light-text dark:text-dark-text border-b-2 border-b-light-border dark:border-b-dark-border shadow-md"
                     : "text-light-text dark:text-dark-text hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover hover:text-light-textHover dark:hover:text-dark-textHover hover:border-b-2 hover:border-b-light-border dark:hover:border-b-dark-border"
                 }`}
               >
-                {tab === "home" ? "Home" : tab === "map" ? "Map" : "About Us"}
+                {tabLabels[tab]}
               </button>
             </li>
           ))}
