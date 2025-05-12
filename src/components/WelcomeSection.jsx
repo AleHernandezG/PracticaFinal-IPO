@@ -31,7 +31,7 @@ const WelcomeSection = ({ onLoginClick, usuario, onLogout }) => {
             Accede a todo el contenido.
           </h2>
           <h2 className="text-sm text-light-textSecondary dark:text-dark-textSecondary font-sans font-medium text-center mb-2 md:text-base">
-            Pulsa en el icono para registrarte.
+            Pulsa en el icono de usuario negro para registrarte.
           </h2>
         </>
       ) : (

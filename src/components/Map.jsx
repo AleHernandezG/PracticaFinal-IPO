@@ -227,7 +227,7 @@ const Map = () => {
   return (
     <div className="flex flex-col h-screen bg-light-background dark:bg-dark-background overflow-hidden">
       {/* Header fijo */}
-      <div className="sticky top-0 z-50">
+      <div className="sticky top-0 z-10">
         {/* Header Principal */}
         <div className="bg-light-button dark:bg-dark-button text-white p-4">
           <h1 className="text-2xl font-bold mb-2">

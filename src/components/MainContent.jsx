@@ -85,7 +85,7 @@ const MainContent = () => {
 
   return (
     <div className="flex flex-col h-screen bg-light-background dark:bg-dark-background">
-      {/* Header no se oculta y puede moverse con scroll */}
+      {/* Header con navegación */}
       <Header onNavigate={navegar} activeScreen={pantallaActiva} />
 
       {/* Contenedor que permite scroll del contenido principal */}
