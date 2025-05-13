@@ -6,10 +6,10 @@ const Header = ({ onNavigate, activeScreen }) => {
 
   // Mapeo de tabs a nombres mostrados
   const tabLabels = {
-    home: "Home",
-    map: "Map",
-    dashboard: "About Us",
-    help: "Help",
+    home: "Inicio",
+    map: "Mapa",
+    dashboard: "Sobre nosotros",
+    help: "Ayuda",
   };
 
   const tabs = ["home", "map", "dashboard", "help"];

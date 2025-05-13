@@ -151,7 +151,8 @@ const Map = () => {
 
     const errorCallback = (error) => {
       console.error("Error obteniendo ubicación: ", error);
-      setUserLocation({ lat: 40.9632, lng: -5.6633 }); // Coordenadas por defecto para Salamanca
+      // Coordenadas por defecto centradas en Salamanca (Plaza Mayor)
+      setUserLocation({ lat: 40.964996, lng: -5.663047 });
       timeoutId = setTimeout(() => setLoading(false), 1500);
     };
 
@@ -165,9 +166,8 @@ const Map = () => {
   // Controlar el cambio de modo de transporte
   const handleTransportModeChange = (mode) => {
     if (showRoute && routeDestination) {
-      setCalculatingRoute(true); // Activar spinner durante el cálculo
+      setCalculatingRoute(true);
       setTransportMode(mode);
-      // Necesitamos recargar la ruta
       setShowRoute(false);
       setTimeout(() => setShowRoute(true), 100);
     } else {
@@ -175,7 +175,6 @@ const Map = () => {
     }
   };
 
-  // Callback cuando la ruta ha sido calculada
   const handleRouteCalculated = useCallback(() => {
     setCalculatingRoute(false);
   }, []);
@@ -215,7 +214,6 @@ const Map = () => {
       ? mapData
       : mapData.filter((location) => location.tipo === filterType);
 
-  // Mostrar el spinner principal si se está cargando la ubicación
   if (loading || !userLocation) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-light-background dark:bg-dark-background">
@@ -234,9 +232,8 @@ const Map = () => {
             Servicios de Salud en Salamanca
           </h1>
 
-          {/* Filtros - reorganizados */}
+          {/* Filtros */}
           <div className="flex justify-between items-start md:items-center">
-            {/* Lugares (izquierda) */}
             <div className="flex flex-wrap gap-2 max-w-3xl">
               <button
                 className={`px-3 py-1 rounded-full ${
@@ -300,7 +297,7 @@ const Map = () => {
               </button>
             </div>
 
-            {/* Modo de transporte (derecha) */}
+            {/* Modo de transporte */}
             <div className="flex items-center space-x-2 ml-4">
               <span className="mr-1 text-sm font-medium hidden sm:inline">
                 Transporte:
@@ -341,7 +338,6 @@ const Map = () => {
           </div>
         </div>
 
-        {/* Barra de ruta activa (se muestra solo cuando hay una ruta) */}
         {showRoute && (
           <div className="bg-light-card dark:bg-dark-card p-4 flex flex-col sm:flex-row sm:items-center justify-between border-b border-light-border dark:border-dark-border shadow-md">
             <div className="font-medium flex flex-col sm:flex-row sm:items-center text-light-text dark:text-dark-text">
@@ -366,11 +362,11 @@ const Map = () => {
         )}
       </div>
 
-      {/* Mapa - El resto del espacio */}
+      {/* Mapa */}
       <div className="flex-1 relative">
         <MapContainer
           center={[userLocation.lat, userLocation.lng]}
-          zoom={15}
+          zoom={16} // Aumentado el zoom para mejor visualización
           style={{ height: "100%", width: "100%" }}
         >
           <TileLayer
@@ -416,7 +412,7 @@ const Map = () => {
                     className="mt-3 bg-light-button dark:bg-dark-button text-white px-4 py-2 rounded-lg w-full hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover"
                     onClick={() => {
                       setRouteDestination(location.coordenadas);
-                      setCalculatingRoute(true); // Mostrar spinner durante el cálculo inicial
+                      setCalculatingRoute(true);
                       setShowRoute(true);
                     }}
                   >
@@ -427,7 +423,6 @@ const Map = () => {
             </Marker>
           ))}
 
-          {/* Componente de rutas */}
           <RoutingMachine
             userLocation={userLocation}
             destination={routeDestination}
@@ -437,7 +432,6 @@ const Map = () => {
           />
         </MapContainer>
 
-        {/* Spinner para recálculo de ruta */}
         {calculatingRoute && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-light-background/60 dark:bg-dark-background/60 z-40">
             <div className="bg-light-card dark:bg-dark-card p-6 rounded-lg shadow-lg flex flex-col items-center">

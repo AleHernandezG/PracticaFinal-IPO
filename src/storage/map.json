@@ -4,8 +4,8 @@
     "nombre": "Hospital Universitario de Salamanca",
     "tipo": "hospital",
     "coordenadas": {
-      "lat": 40.9634,
-      "lng": -5.6634
+      "lat": 40.962834,
+      "lng": -5.675953
     },
     "direccion": "Paseo de San Vicente, 58, 37007 Salamanca",
     "telefono": "923 29 11 00",
@@ -22,8 +22,8 @@
     "nombre": "Farmacia Calle Zamora",
     "tipo": "farmacia",
     "coordenadas": {
-      "lat": 40.9652,
-      "lng": -5.6643
+      "lat": 40.969001,
+      "lng": -5.663749
     },
     "direccion": "Calle Zamora, 12, 37002 Salamanca",
     "telefono": "923 12 34 56",
@@ -41,8 +41,8 @@
     "nombre": "Urgencias Salamanca",
     "tipo": "urgencias",
     "coordenadas": {
-      "lat": 40.9618,
-      "lng": -5.6672
+      "lat": 40.971433,
+      "lng": -5.660836
     },
     "direccion": "Av. de la Aldehuela, s/n, 37007 Salamanca",
     "telefono": "923 23 45 67",
@@ -59,10 +59,10 @@
     "nombre": "Clínica Salamanca",
     "tipo": "clinica",
     "coordenadas": {
-      "lat": 40.9647,
-      "lng": -5.6589
+      "lat": 40.963977,
+      "lng": -5.663684
     },
-    "direccion": "Calle Gran Vía, 45, 37003 Salamanca",
+    "direccion": "Pl. del Poeta Iglesias, 37001 Salamanca",
     "telefono": "923 98 76 54",
     "horario": "Lunes a Viernes: 9:00 - 19:00",
     "descripcion": "Clínica privada con servicios de medicina general y especialidades.",
@@ -77,10 +77,10 @@
     "nombre": "Farmacia Plaza Mayor",
     "tipo": "farmacia",
     "coordenadas": {
-      "lat": 40.9649,
-      "lng": -5.6632
+      "lat": 40.964873,
+      "lng": -5.66354
     },
-    "direccion": "Plaza Mayor, 10, 37002 Salamanca",
+    "direccion": "Pl. Mayor, 37002 Salamanca",
     "telefono": "923 21 43 65",
     "horario": "Lunes a Domingo: 9:00 - 22:00",
     "descripcion": "Farmacia ubicada en el corazón de Salamanca, con servicio de entrega a domicilio.",
@@ -93,13 +93,13 @@
   },
   {
     "id": 6,
-    "nombre": "Centro de Salud Salamanca Centro",
+    "nombre": "Centro de Salud Salamanca",
     "tipo": "centro_salud",
     "coordenadas": {
-      "lat": 40.9658,
-      "lng": -5.6615
+      "lat": 40.971769,
+      "lng": -5.660633
     },
-    "direccion": "Calle Toro, 33, 37002 Salamanca",
+    "direccion": "Av. de Portugal, 83, 37005 Salamanca",
     "telefono": "923 26 78 90",
     "horario": "Lunes a Viernes: 8:00 - 15:00",
     "descripcion": "Centro de salud público con servicios de atención primaria.",
@@ -114,10 +114,10 @@
     "nombre": "Farmacia San Juan",
     "tipo": "farmacia",
     "coordenadas": {
-      "lat": 40.9662,
-      "lng": -5.6598
+      "lat": 40.971636,
+      "lng": -5.650763
     },
-    "direccion": "Calle San Juan, 8, 37001 Salamanca",
+    "direccion": "P.º de la Estación, 93, 37004 Salamanca",
     "telefono": "923 25 67 89",
     "horario": "Lunes a Sábado: 9:00 - 21:00",
     "descripcion": "Farmacia con amplia experiencia en el cuidado de la salud.",
@@ -133,10 +133,10 @@
     "nombre": "Clínica Dental Salamanca",
     "tipo": "clinica_dental",
     "coordenadas": {
-      "lat": 40.9631,
-      "lng": -5.6603
+      "lat": 40.973631,
+      "lng": -5.653148
     },
-    "direccion": "Calle Ruiz Aguilera, 15, 37002 Salamanca",
+    "direccion": "Av. Alfonso IX de León, 42, 37004 Salamanca",
     "telefono": "923 22 33 44",
     "horario": "Lunes a Viernes: 10:00 - 18:00",
     "descripcion": "Clínica dental especializada en ortodoncia y estética dental.",
@@ -151,10 +151,10 @@
     "nombre": "Farmacia La Alamedilla",
     "tipo": "farmacia",
     "coordenadas": {
-      "lat": 40.9605,
-      "lng": -5.6627
+      "lat": 40.967234,
+      "lng": -5.659202
     },
-    "direccion": "Calle La Alamedilla, 5, 37005 Salamanca",
+    "direccion": "Gran Vía, 21, 37001 Salamanca",
     "telefono": "923 24 56 78",
     "horario": "Lunes a Domingo: 9:00 - 21:00",
     "descripcion": "Farmacia con servicio de atención personalizada y entrega a domicilio.",
@@ -170,8 +170,8 @@
     "nombre": "Hospital Clínico de Salamanca",
     "tipo": "hospital",
     "coordenadas": {
-      "lat": 40.9623,
-      "lng": -5.6658
+      "lat": 40.962834,
+      "lng": -5.675953
     },
     "direccion": "Paseo de San Vicente, 108, 37007 Salamanca",
     "telefono": "923 29 11 11",

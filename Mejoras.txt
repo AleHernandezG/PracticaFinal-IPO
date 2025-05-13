@@ -1,10 +1,4 @@
-- Mpa ver las busquedas recientes y fav.
-- Seccion de Mapa (Busquedas recientes plantearlo si no es muy jodido en ese apartado). Básicamente importar un google maps
-- Seccion de Help y About Us con comentarios del Feedback y QAS. (modo oscuro y claro y meter mas preguntas y que la gente pueda hacer las suyas)
 - Cambiar a banner contemporizador en el main.
-- Que funcionen las flechas del propio navegador
-- Sección con una API de chat gpt para consultar acerca de consultas médicas o tal vainas, vamos lo que tienen todos.
-- Hacer un foro para las preguntas
 
 
 Dependencias a instalar para que funcione el proyecto
@@ -17,6 +11,7 @@ Dependencias a instalar para que funcione el proyecto
 - npm install --save-dev @vitejs/plugin-react-swc
 - npm install --save-dev terser
 
-Todo en un comando:
+Mas corto abajo
 
-npm install react react-dom leaflet leaflet-routing-machine react-leaflet react-spinners && npm install --save-dev vite @vitejs/plugin-react-swc terser
+npm install react react-dom leaflet leaflet-routing-machine react-leaflet react-spinners 
+npm install --save-dev vite @vitejs/plugin-react-swc terser
