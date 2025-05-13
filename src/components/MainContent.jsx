@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Article from "./Article";
-import WelcomeSection from "./WelcomeSection";
-import SearchBar from "./SearchBar";
-import InfoLugar from "./InfoLugar";
+import Article from "./inicio/Article";
+import WelcomeSection from "./inicio/WelcomeSection";
+import SearchBar from "./inicio/SearchBar";
+import InfoLugar from "./inicio/InfoLugar";
 import Header from "./Header";
-import Ventana from "./Ventana";
-import Map from "./Map";
-import Dashboard from "./Dashboard";
-import Help from "./Help"; // Asegúrate de crear este componente
+import Ventana from "./inicio/Ventana";
+import Map from "./map/Map";
+import Dashboard from "./about/Dashboard";
+import Help from "./help/Help"; // Asegúrate de crear este componente
 import lugaresData from "/src/storage/infoLugares.json";
 
 const MainContent = () => {
