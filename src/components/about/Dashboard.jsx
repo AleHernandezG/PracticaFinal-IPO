@@ -3,6 +3,53 @@ import React from "react";
 const AboutUs = () => {
   return (
     <section className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text py-20 px-6 md:px-16 max-w-6xl mx-auto font-poppins">
+      {/* Sección Quiénes Somos */}
+      <div className="mb-24">
+        <h2 className="text-4xl font-bold text-light-accentText dark:text-dark-accentText mb-8 text-center">
+          QUIÉNES SOMOS
+        </h2>
+        <div className="flex justify-center mb-8">
+          <img
+            src="owners.jpeg"
+            alt="Alejandro y Aarón, fundadores de CliniGo"
+            className="rounded-xl shadow-lg w-full max-w-md object-cover border border-light-border dark:border-dark-border"
+          />
+        </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-lg leading-relaxed text-light-text dark:text-dark-text">
+            Somos{" "}
+            <strong className="text-light-accent dark:text-dark-accent">
+              Alejandro Hernández González
+            </strong>{" "}
+            y{" "}
+            <strong className="text-light-accent dark:text-dark-accent">
+              Aarón Barroso García
+            </strong>
+            , dos estudiantes de tercer año de Ingeniería Informática en la
+            Universidad de Salamanca (USAL). Apasionados por la tecnología y la
+            innovación, fundamos CliniGo para abordar los desafíos de
+            accesibilidad en los refactoring servicios de salud, combinando
+            nuestra formación técnica con un enfoque centrado en las personas.
+          </p>
+          <p className="text-lg leading-relaxed mt-4 text-light-text dark:text-dark-text">
+            Trabajamos en colaboración con expertos en sanidad e informática
+            para garantizar que CliniGo sea una herramienta fiable y eficiente.
+            Nuestro equipo incluye consultores médicos que aportan conocimientos
+            sobre las necesidades del sistema sanitario y desarrolladores con
+            experiencia en interfaces de usuario intuitivas, asegurando que la
+            aplicación sea accesible para todos, desde jóvenes hasta personas
+            mayores.
+          </p>
+          <p className="text-lg leading-relaxed mt-4 text-light-textSecondary dark:text-dark-textSecondary">
+            Nuestra visión es transformar la forma en que las personas acceden a
+            la atención médica, haciendo que cada segundo cuente en situaciones
+            críticas. Con CliniGo, no solo ofrecemos una aplicación, sino una
+            solución integral que combina tecnología de punta con un profundo
+            compromiso social.
+          </p>
+        </div>
+      </div>
+
       {/* Sección Nuestra Misión */}
       <div className="grid md:grid-cols-2 gap-10 items-center mb-24">
         <div>
@@ -99,17 +146,8 @@ const AboutUs = () => {
             CÓMO NACIMOS
           </h2>
           <p className="text-lg leading-relaxed text-light-text dark:text-dark-text">
-            Somos{" "}
-            <strong className="text-light-accent dark:text-dark-accent">
-              Alejandro Hernández González
-            </strong>{" "}
-            y{" "}
-            <strong className="text-light-accent dark:text-dark-accent">
-              Aarón Barroso García
-            </strong>
-            , estudiantes de 3er año de Ingeniería Informática. Nuestro proyecto
-            comenzó tras identificar las dificultades que enfrentan las personas
-            al acceder a servicios de urgencias.
+            Nuestro proyecto comenzó tras identificar las dificultades que
+            enfrentan las personas al acceder a servicios de urgencias.
           </p>
           <p className="text-lg leading-relaxed mt-4 text-light-text dark:text-dark-text">
             Realizamos entrevistas con personas de diversos perfiles (jóvenes,
