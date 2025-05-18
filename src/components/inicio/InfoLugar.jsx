@@ -3,7 +3,7 @@ import React from "react";
 const InfoLugar = ({ lugar }) => {
   if (!lugar)
     return (
-      <div className="rounded-md md:bg-[url(/logo.jpeg)] shadow-light-shadow dark:shadow-dark-shadow mx-2 my-2 shadow-2xl hover:skew-y-1 hover:scale-[1.02] hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover hover:border-light-border dark:hover:border-dark-border transition-all duration-200 ease-in md:col-start-1 md:col-span-4 md:row-start-3 md:row-end-7 max-w-[98%]"></div>
+      <div className="rounded-md md:bg-[url(/fond.jpg)] shadow-light-shadow dark:shadow-dark-shadow mx-2 my-2 shadow-2xl hover:skew-y-1 hover:scale-[1.02] hover:bg-light-buttonHover dark:hover:bg-dark-buttonHover hover:border-light-border dark:hover:border-dark-border transition-all duration-200 ease-in md:col-start-1 md:col-span-4 md:row-start-3 md:row-end-7 max-w-[98%]"></div>
     );
 
   return (
